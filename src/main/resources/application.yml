@@ -1,12 +1,12 @@
 spring:
   application:
-    name: springboot-init
+    name: lee-api
   # 默认 dev 环境
   profiles:
     active: dev
   # 支持 swagger3
   mvc:
-    pathmatch:
+    path match:
       matching-strategy: ant_path_matcher
   # session 配置
   session:
@@ -18,7 +18,7 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
+    url: jdbc:mysql://localhost:3306/leeapi
     username: root
     password: 123456
   # Redis 配置
@@ -42,7 +42,7 @@ spring:
       max-file-size: 10MB
 server:
   address: 0.0.0.0
-  port: 8101
+  port: 8080
   servlet:
     context-path: /api
     # cookie 30 天过期
